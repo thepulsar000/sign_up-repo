@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+}
+.header {
+  height: 7vh;
+  font-family: Mulish, sans-serif;
+  box-shadow: 1px 1px 5px hsla(0, 0%, 0%, 0.3);
+  display: flex;
+  padding: 0.2em 2em;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+}
+.lists {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  padding: 0 15em 0 0;
+}
+.menu {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .header {
+    box-shadow: none;
+  }
+  .lists {
+    display: none;
+  }
+  .menu {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 701px) {
+  .lists {
+    display: flex;
+  }
+}
+
+.fontt {
+  font-family: Mulish, sans-serif;
+  font-weight: 900;
+}
+
+.font {
+  font-family: Mulish, sans-serif;
+  font-weight: 500;
+  padding-top: 2em;
+}
+
+h2 {
+  font-size: 25px;
+  text-align: center;
+}
+.container {
+  height: calc(100vh - 7vh);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* This is for the container */
+.box {
+  box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.5);
+  width: 51%;
+  height: 80%;
+  margin: 0.3em auto;
+  display: flex;
+}
+
+/*This is for the image part, it also has the linear gradient*/
+.image {
+  width: 62%;
+  height: 100%;
+  background-image: linear-gradient(
+      to top right,
+      rgba(106, 155, 159, 0.5) 30%,
+      rgba(235, 125, 110, 0.4)
+    ),
+    url(./img/one.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no repeat;
+}
+
+/* This is for the text part (right hand side) */
+.form {
+  width: 38%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  padding: 2em;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+label {
+  font-size: 14px;
+}
+
+/* This style affects all inputs except the checkbox */
+input {
+  display: inline-block;
+  width: 100%;
+  border-style: hidden hidden solid;
+  border-color: rgba(179, 179, 179, 0.5);
+  border-width: 2px;
+  padding: 0.5em 0;
+  margin-bottom: 1.8em;
+  font-size: 14px;
+  opacity: 0.5;
+  outline: none;
+}
+
+input[type="checkbox"] {
+  width: auto;
+  display: inline;
+}
+
+.button {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+button {
+  padding: 1em 1.5em;
+  font-size: 10px;
+  font-weight: 500;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  margin: 1em 1em 0 0;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.leftbtn {
+  background-image: linear-gradient(
+    60deg,
+    rgba(235, 125, 110, 0.6),
+    rgba(106, 155, 159, 0.8)
+  );
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+}
+
+/* The arrow icon is styled here */
+.fa-solid {
+  padding-left: 0.1em;
+  font-size: 12px;
+}
+@media (max-width: 700px) {
+  .box {
+    width: 100%;
+    height: calc(100vh - 7vh);
+    box-shadow: none;
+  }
+  .image {
+    display: none;
+  }
+  .form {
+    width: 100%;
+    border-top: 2px solid skyblue;
+    border-bottom: 2px solid pink;
+  }
+}
+@media (max-width: 900px) and (min-width: 701px) {
+  .image {
+    width: 38%;
+  }
+  .form {
+    width: calc(100% - 38%);
+  }
+}
